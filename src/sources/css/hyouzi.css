@@ -1,0 +1,253 @@
+@font-face{
+    font-family: 'pigmo';
+    src:local('pigmo'),url('Pigmo-00.otf');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.Cent{
+    text-align: center;
+}
+.font{
+    font-size: 50px;
+}
+.font-h{
+    font-size: 100px;
+}
+main{
+    margin-top: 30px;
+}
+img{
+    width:  auto;
+    height: 300px;
+}
+
+
+header{
+    position: fixed; /* ヘッダーを固定する */
+    top: 0; /* 上部から配置の基準位置を決める */ 
+    left: 0; /* 左から配置の基準位置を決める */ 
+    width: 100%; /* ヘッダーの横幅を指定する */
+    height: 135px; /* ヘッダーの高さを指定する */
+    padding: 0px; /* ヘッダーの余白を指定する(上下左右) */
+    background-color: #31a9ee; /* ヘッダーの背景色を指定する */
+    color: #000000; /* フォントの色を指定する */
+    z-index: 9999;
+    cursor: pointer;
+
+}
+footer{
+    position: fixed; /* フッターを固定する */
+    bottom: 0; /* 上部から配置の基準位置を決める */ 
+    left: 0; /* 左から配置の基準位置を決める */ 
+    width: 100%; /* フッターの横幅を指定する */
+    height: 35px; /* フッターの高さを指定する */
+    padding:10px; /* フッター内側の余白を指定する(上下左右) */
+    background-color: #31a9ee; /* フッターの背景色を指定する */
+    color: #FFFFFF; /* フッターのフォントの色を指定する */
+    z-index: 9998;
+} 
+.header-title a {
+    top: 0px;
+    color: #000000; /* フォントの色を指定する */
+}
+.footer-title{
+    color: #000000; /* フォントの色を指定する */
+}
+.trump{
+    font-family: 'pigmo';
+}
+
+#back {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+/* 診断結果の中身 */
+.box29 {
+    margin: 3em auto;
+    text-align: center;
+    background: #dcefff;
+    width: 800px;
+    height: 600px;
+}
+.box29 .box-title {
+    /* font-size: 1.2em; */
+    font-size: 3.0em;
+    background: #5fb3f5;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.box29 p {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+
+
+/* ツイッター＆フェイスブックボタン＆Google＆LINE */
+#share ul{
+    height:auto;
+}
+#share li{
+	font-size:14px;
+	float:left;
+	/* text-align:center; */
+    /* width:84px; */
+    width: 100px;
+    margin-right:1%;
+	margin-bottom:8px;
+	border-radius:3px;
+	list-style:none;
+}
+#share li.share-twitter{
+	background:#55acee;
+	box-shadow:0 2px #2795e9;
+}
+#share li.share-twitter:hover{
+	background:#83c3f3;
+}
+#share li.share-facebook{
+	background:#3b5998;
+	box-shadow:0 2px #2d4373;
+}
+#share li.share-facebook:hover{
+	background:#4c70ba;
+}
+#share li.share-google{
+	background:#dd4b39;
+	box-shadow:0 2px #c23321;
+}
+#share li.share-google:hover{
+	background:#e47365;
+}
+#share li.share-line{
+	background:#00C300;
+	box-shadow:0 2px #009d00;
+}
+#share li.share-line:hover{
+	background:#2bd92b;
+}
+#share a{
+	display:block;
+	height:27px;
+	padding-top:6px;
+	color:#ffffff;
+	text-decoration:none;
+}
+#share a:hover{
+	text-decoration:none;
+	color:#ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* フェード */
+.fo{
+    width: 100%;
+}
+.fade_group div ,
+.fade_group2 div {
+    content: '';
+    position: fixed;
+    top: 0;
+    /* left: -100vw; */
+    top: -100%;
+    /* width: 100vw; */
+    width: 100vw;
+    height: 100%;
+    /* height: 100vw; */
+    pointer-events: none;
+}
+.fade_group div {
+    z-index: 9997;
+    transition: .6s;
+}
+.fade_group2 div {
+    z-index: 9996;
+    transition: .8s;
+}
+.fade_group div:nth-of-type(1) {
+    background: rgba(154, 143, 255, 0.3);
+}
+.fade_group div:nth-of-type(2) {
+    background: rgba(154, 143, 255, 0.5);
+    transition-delay:.4s;
+}
+.fade_group div:nth-of-type(3) {
+    background: rgba(154, 143, 255, 0.7);
+    transition-delay:.5s;
+}
+.fade_group div:nth-of-type(4) {
+    background: rgb(49, 169, 238);
+    transition-delay:.8s;
+}
+.fade_group2 div:nth-of-type(1) {
+    background: rgba(154, 143, 255, 0.8);
+    transition-delay: .7s;
+}
+.fade_group2 div:nth-of-type(2) {
+    background: rgba(154, 143, 255, 0.8);
+    transition-delay: .8s;
+}
+body.fo .fade_group div{
+    top: 0;
+    /* left: 0; */
+}
+body.fo .fade_group2 div{
+    top: 100%;
+    /* left: 100vw; */
+}
+
+
+.wrap {
+      overflow: hidden;
+    }
+    .sliding {
+      background: url("1552967i.jpg") repeat-x;
+      background-size: contain;
+      height: 100vh;
+
+      animation: slide 60s linear infinite;
+    }
+     
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+    
+    
+
+
+
+
+
+
+
+
+
+
+
