@@ -18,7 +18,8 @@ class Random {
 }
 
 function tramp() {
-    let tramp_game_name = [
+    let tramp_game_name = new Array();
+    tramp_game_name = [
         '29',
         '51',
         'アメリカンページワン',
@@ -114,6 +115,7 @@ function tramp() {
         'https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A4%E3%83%B3%E3%82%AF%E3%82%AD%E3%83%A9%E3%83%BC',
         'https://ja.wikipedia.org/wiki/%E3%81%86%E3%81%99%E3%81%AE%E3%82%8D',
         'https://ja.wikipedia.org/wiki/%E7%B5%B5%E5%8F%96%E3%82%8A',
+        'https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%B3%E3%83%96%E3%83%AB',
         'https://ja.wikipedia.org/wiki/%E3%82%AB%E3%82%B7%E3%83%8E',
         'https://ja.wikipedia.org/wiki/%E3%82%AB%E3%82%B8%E3%83%8E%E3%82%A6%E3%82%A9%E3%83%BC',
         'https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%83%E3%83%97%E3%83%AB_(%E3%83%88%E3%83%A9%E3%83%B3%E3%83%97%E3%82%B2%E3%83%BC%E3%83%A0)',
@@ -200,20 +202,14 @@ function tramp() {
     let name = document.getElementById('name').value;
     let tramp_length = tramp_game_name.length;
     let sum_number = 0;
-
-    console.log(name.length);
     for (let i = 0; i < name.length; i++) {
-        console.log(name[i]);
         let code_number = name[i].charCodeAt(0);
         sum_number += random.next() * code_number;
     }
+
     sum_number = random.next() * sum_number;
     random_number = sum_number % tramp_length;
-    console.log(tramp_game_name[random_number]);
-    tramp_array = [
-        tramp_game_name[random_number],
-        tramp_game_url[random_number]
-    ];
+    random_number = Math.abs(random_number);
 
     tramp_name = tramp_game_name[random_number];
     console.log(tramp_name);
