@@ -1,0 +1,72 @@
+body{
+    /*↓一方向へのグラデーション「linear-gradient(グラデーションの角度(方向),開始色, 終色)」*/
+    background:linear-gradient(#4cb8c4, #3CD3AD)fixed;
+}
+
+/*「@font-face」・・・Webフォントの利用を指定できる*/
+@font-face{
+    /*↓font-familyに追加*/
+    font-family: 'pigmo00';
+    /*  ↓追加する場所(?)    ↓追加する内容(?)*/
+    src:local('pigmo00'),  url('pigmo-00.otf');
+}
+
+/*テキストボックスと送信ボタンをセンタリングする*/
+.formOya{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+/*input要素のsubmitにだけ適用*/
+.submit{
+    font-family: 'pigmo00';
+    font-size: 3.5rem;
+    background: linear-gradient(-45deg, #22e3bb 0%, #2196F3 100%);
+    border: 2px solid #2196F3;
+    color: #fff;
+    padding: 15px 36px;
+    /*↓・・・角の丸みをだすため削除*/
+    /* outline: solid 2px #2196F3; */
+    border-radius: 25px;
+    margin-top: 40px;
+
+    /*カーソルを変更する*/
+    cursor: pointer;
+}
+
+.text{
+    font-size: 15px;
+    height: 2rem;
+    width: 20rem;
+}
+
+/*タイトルに「pigmo00」フォントを適用*/
+.title{
+    font-family: 'pigmo00';
+    font-size: 7em;
+    text-align : center;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/*fadeostアニメーション*/
+.fadeout {
+    opacity: 1;
+    animation-name: fadeout;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeout{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
